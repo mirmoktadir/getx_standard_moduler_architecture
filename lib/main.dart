@@ -3,30 +3,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
-import 'app/data/local/my_hive.dart';
 import 'app/data/local/my_shared_pref.dart';
-import 'app/data/models/user_model.dart';
 import 'app/routes/app_pages.dart';
 import 'config/theme/my_theme.dart';
 import 'config/translations/localization_service.dart';
-import 'utils/fcm_helper.dart';
 
 Future<void> main() async {
   // wait for bindings
   WidgetsFlutterBinding.ensureInitialized();
 
   // initialize local db (hive) and register our custom adapters
-  await MyHive.init(adapters: [UserModelAdapter()]);
+  // await MyHive.init(adapters: [UserModelAdapter()]);
 
   // init shared preference
   await MySharedPref.init();
 
   // inti fcm & notifications services (awesome notifications)
-  await FcmHelper.initFcm();
+  // await FcmHelper.initFcm();
 
   runApp(
     ScreenUtilInit(
-      // xd art board size
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
