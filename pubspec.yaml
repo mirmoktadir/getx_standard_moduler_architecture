@@ -30,6 +30,7 @@ dependencies:
   http: ^0.13.5
   file_picker: ^5.2.2
   lottie: ^2.0.0
+  flutter_otp_text_field: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -43,10 +44,10 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/app_icon.png"
+  image_path: "assets/images/brit-crm.png"
 
 flutter_native_splash:
-  background_image: assets/images/app_logo.png
+  background_image: assets/images/brit-crm.png
   android: true
   ios: true
 

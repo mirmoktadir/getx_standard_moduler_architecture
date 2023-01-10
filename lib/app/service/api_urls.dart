@@ -1,5 +1,8 @@
 class ApiUrl {
   /// Base URL
-  static const baseUrl = "http://127.0.0.1:8000/api";
-
+  static const baseUrl = "https://hrms.fibizz.com/api";
+//*AUTH
+  static const login = '$baseUrl/login';
+  static const sentOTP = '$baseUrl/forgot/password';
+  static const resetPass = '$baseUrl/password/reset/';
 }

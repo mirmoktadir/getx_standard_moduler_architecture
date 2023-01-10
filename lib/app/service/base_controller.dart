@@ -6,12 +6,12 @@ class BaseController {
     hideLoading();
     if (error is BadRequestException) {
       var message = error.message;
-      DialogHelper.showErroDialog(description: message);
+      DialogHelper.showErrorDialog(description: message);
     } else if (error is FetchDataException) {
       var message = error.message;
-      DialogHelper.showErroDialog(description: message);
+      DialogHelper.showErrorDialog(description: message);
     } else if (error is ApiNotRespondingException) {
-      DialogHelper.showErroDialog(
+      DialogHelper.showErrorDialog(
           description: 'Oops! It took longer to respond.');
     }
   }
